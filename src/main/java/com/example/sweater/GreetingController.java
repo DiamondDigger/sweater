@@ -2,6 +2,7 @@ package com.example.sweater;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
@@ -23,5 +24,8 @@ public class GreetingController {
         model.put("some", "Hello. Let's code!");
         return "main";
     }
+
+    @PostMapping()
+    public String
 
 }
