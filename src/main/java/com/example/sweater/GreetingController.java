@@ -27,19 +27,20 @@ public class GreetingController {
     @GetMapping()
     public String main(Map<String, Object> model) {
         Iterable<Message> messages = messageRepo.findAll();
-        model.put("message", "Hello. Let's code!");
+        model.put("messages", "Hello. Let's code!");
         return "main";
     }
 
     @PostMapping
-    public String add(Map<String, Object> model,
-                     @RequestParam String text, @RequestParam String tag){
+    public String add( @RequestParam String text, @RequestParam String tag,
+                       Map<String, Object> model
+                    ){
         Message message = new Message(text, tag);
         messageRepo.save(message);
 
         Iterable<Message> messages = messageRepo.findAll();
 
-        model.put("messages", message);
+        model.put("messages", messages);
 
         return "main";
     }
