@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <title>main</title>
 </head>
-    <body>
+        <body>
+        <form method="post">
+            <input type="text" name="text" placeholder="Введите сообщение"/>
+            <input type="text" name="text" placeholder="Тэг"/>
+            <button type="submit">Добавить</button>
+        </form>
+
         {{#messages}}
-            <div>
-                <b>{{id}}</b>
-                <span>{{text}}</span>
-                <i>{{tag}}</i>
-            </div>
+                <div>
+                    <b>{{id}}</b>
+                    <span>{{text}}</span>
+                    <i>{{tag}}</i>
+                </div>
         {{/messages}}
     </body>
-</html>
+        </html>
