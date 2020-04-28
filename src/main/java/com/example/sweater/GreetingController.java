@@ -31,7 +31,7 @@ public class GreetingController {
     @GetMapping()
     public String main(Map<String, Object> model) {
         Iterable<Message> messages = messageRepo.findAll();
-        model.put("messages", "Hello. Let's code!");
+        model.put("messages", messages);
         return "main";
     }
 
