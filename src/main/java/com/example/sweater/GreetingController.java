@@ -49,4 +49,9 @@ public class GreetingController {
         return "main";
     }
 
+    @PostMapping
+    public String filter(@RequestParam String text, Map<String, Object> model){
+        return "main";
+    }
+
 }
