@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -52,9 +51,12 @@ public class GreetingController {
 
     @PostMapping("filter")
     public String filter(@RequestParam String filter, Map<String, Object> model){
-        if (filter!= null &&  !filter.isEmpty()) {
-            List<Message> messages = messageRepo.findByTag(filter);
-            model.put("messages",messages);
+        Iterable<Message> messages = messageRepo.findAll();
+        if (filter != null && !filter.isEmpty()) {
+            messages = messageRepo.findByTag(filter);
+            model.put("messages", messages);
+        } else {
+            model.put("messages", messages);
         }
         return "main";
     }
