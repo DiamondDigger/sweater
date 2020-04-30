@@ -6,6 +6,9 @@
 </head>
     <body>
     <div>
+        <form action="/logout" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
         <form method="post">
             <input type="text" name="text" placeholder="Введите сообщение"/>
             <input type="text" name="tag" placeholder="Тэг"/>
@@ -26,5 +29,6 @@
                 <i>{{tag}}</i>
             </div>
         {{/messages}}
+
     </body>
 </html>
