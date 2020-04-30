@@ -1,4 +1,4 @@
-package com.example.securingweb;
+package com.example.sweater.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login")
+                .loginPage("/main")
                 .permitAll()
                 .and()
                 .logout()
