@@ -13,9 +13,9 @@ public class User {
     private long id;
     private String user_name;
     private String password;
-    private Set<role> roles;
+    private Set<Role> roles;
 
-    public User(long id, String user_name, String password, Set<role> roles) {
+    public User(long id, String user_name, String password, Set<Role> roles) {
         this.id = id;
         this.user_name = user_name;
         this.password = password;
@@ -46,11 +46,11 @@ public class User {
         this.password = password;
     }
 
-    public Set<role> getRoles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<role> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 }
