@@ -1,23 +1,22 @@
 package com.example.sweater.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "usr")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String user_name;
+    private String username;
     private String password;
+    private boolean active;
     private Set<Role> roles;
 
-    public User(long id, String user_name, String password, Set<Role> roles) {
+    public User(long id, String username, String password, Set<Role> roles) {
         this.id = id;
-        this.user_name = user_name;
+        this.username = username;
         this.password = password;
         this.roles = roles;
     }
@@ -30,12 +29,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
