@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Controller
 public class RegistrationController {
-    @Autowired
+    @Autowired(required = false)
     private UserRepo userRepo;
 
     @GetMapping("/registration")

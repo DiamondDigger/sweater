@@ -12,8 +12,11 @@ import java.util.Map;
 
 @Controller
 public class MainController {
-    @Autowired
+    @Autowired(required = false)
     private MessageRepo messageRepo;
+
+    public MainController() {
+    }
 
     public MainController(MessageRepo messageRepo) {
         this.messageRepo = messageRepo;
