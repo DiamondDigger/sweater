@@ -1,4 +1,4 @@
-package com.example.sweater.controllers;
+package com.example.sweater.controller;
 
 import com.example.sweater.domain.Message;
 import com.example.sweater.repos.MessageRepo;
