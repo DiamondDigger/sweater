@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Controller
 public class MainController {
-    @Autowired(required = false)
+    @Autowired()
     private MessageRepo messageRepo;
 
     public MainController() {
