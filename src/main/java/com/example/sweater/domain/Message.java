@@ -43,6 +43,6 @@ public class Message {
     }
 
     public void setId(Integer id) {
-        id = id;
+        this.id = id;
     }
 }

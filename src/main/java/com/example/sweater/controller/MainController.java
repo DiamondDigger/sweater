@@ -15,9 +15,6 @@ public class MainController {
     @Autowired()
     private MessageRepo messageRepo;
 
-    public MainController() {
-    }
-
     public MainController(MessageRepo messageRepo) {
         this.messageRepo = messageRepo;
     }
@@ -32,11 +29,6 @@ public class MainController {
         Iterable<Message> messages = messageRepo.findAll();
         model.put("messages", messages);
         return "main";
-    }
-
-    @GetMapping("/login")
-    public String login(){
-        return "login";
     }
 
     @PostMapping("/main")
